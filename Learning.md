@@ -639,13 +639,13 @@ Optional - Month 11 (November 2026):
 
 ### 📊 Certification ROI Analysis
 
-| Certification | Cost | Time Investment | Salary Impact | Job Postings Requiring |
-|--------------|------|-----------------|---------------|------------------------|
-| AWS SAA | $150 | 70h | +$5,000/year | 45% |
-| AWS Security Specialty | $300 | 90h | +$10,000/year | 28% |
-| AWS DOP | $300 | 90h | +$12,000/year | 22% |
-| OSCP | $1,649 | 160h | +$15,000/year | 12% |
-| **Total** | **$2,399** | **410h** | **+$42,000/year** | - |
+| Certification          | Cost       | Time Investment | Salary Impact     | Job Postings Requiring |
+|------------------------|------------|-----------------|-------------------|------------------------|
+| AWS SAA                | $150       | 70h             | +$5,000/year      | 45%                    |
+| AWS Security Specialty | $300       | 90h             | +$10,000/year     | 28%                    |
+| AWS DOP                | $300       | 90h             | +$12,000/year     | 22%                    |
+| OSCP                   | $1,649     | 160h            | +$15,000/year     | 12%                    |
+| **Total**              | **$2,399** | **410h**        | **+$42,000/year** | -                      |
 
 **Note:** Salary impacts are conservative estimates based on industry surveys (Dice, Robert Half 2024-2025).
 
@@ -761,16 +761,15 @@ Katacoda / Killercoda:
 ## 5. Study Platforms
 
 ### 🎓 Platform Comparison
-
-| Platform | Monthly Cost | Best For | Hands-On Labs | Quality | Recommendation |
-|----------|--------------|----------|---------------|---------|----------------|
-| **TryHackMe** | $10 | Security beginners | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | Must-have |
-| **HackTheBox** | $20 | Advanced pentesting | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | Month 11 only |
-| **KodeKloud** | $30 | K8s/DevOps | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | Critical for CKS |
-| **A Cloud Guru** | $39 | AWS certifications | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | Month 4-6 only |
-| **Udemy** | $10-15/course | Specific topics | ⭐⭐⭐ | ⭐⭐⭐⭐ | Best value |
-| **Coursera** | $49 | Academic depth | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | Optional |
-| **Linux Academy** | Merged with ACG | - | - | - | Use ACG instead |
+| Platform          | Monthly Cost    | Best For            | Hands-On Labs | Quality           | Recommendation   |
+|-------------------|-----------------|---------------------|---------------|-------------------|------------------|
+| **TryHackMe**     | $10             | Security beginners  | ⭐⭐⭐⭐⭐      | ⭐⭐⭐⭐           | Must-have        |
+| **HackTheBox**    | $20             | Advanced pentesting | ⭐⭐⭐⭐⭐      | ⭐⭐⭐⭐⭐         | Month 11 only    |
+| **KodeKloud**     | $30             | K8s/DevOps          | ⭐⭐⭐⭐⭐      | ⭐⭐⭐⭐⭐         | Critical for CKS |
+| **A Cloud Guru**  | $39             | AWS certifications  | ⭐⭐⭐⭐       | ⭐⭐⭐⭐            | Month 4-6 only   |
+| **Udemy**         | $10-15/course   | Specific topics     | ⭐⭐⭐         | ⭐⭐⭐⭐           | Best value       |
+| **Coursera**      | $49             | Academic depth      | ⭐⭐⭐         | ⭐⭐⭐⭐⭐         | Optional         |
+| **Linux Academy** | Merged with ACG | -                   | -             | -                | Use ACG instead  |
 
 ### 📱 Mobile Learning Apps
 ```yaml
