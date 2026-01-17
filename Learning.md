@@ -622,11 +622,11 @@ Month 6 (June 2026):
   Validity: 3 years
   
 Month 8 (August 2026):
-  Certification: Certified Kubernetes Security Specialist (CKS)
-  Cost: $395 USD
-  Preparation Time: 60-80 hours
+  Certification: AWS Certified DevOps Engineer - Professional (DOP)
+  Cost: $300 USD
+  Preparation Time: 80-100 hours
   Pass Rate: 65% (very challenging)
-  Validity: 2 years
+  Validity: 3 years
   
 Optional - Month 11 (November 2026):
   Certification: Offensive Security Certified Professional (OSCP)
@@ -643,9 +643,9 @@ Optional - Month 11 (November 2026):
 |--------------|------|-----------------|---------------|------------------------|
 | AWS SAA | $150 | 70h | +$5,000/year | 45% |
 | AWS Security Specialty | $300 | 90h | +$10,000/year | 28% |
-| CKS | $395 | 70h | +$8,000/year | 18% |
+| AWS DOP | $300 | 90h | +$12,000/year | 22% |
 | OSCP | $1,649 | 160h | +$15,000/year | 12% |
-| **Total** | **$2,494** | **390h** | **+$38,000/year** | - |
+| **Total** | **$2,399** | **410h** | **+$42,000/year** | - |
 
 **Note:** Salary impacts are conservative estimates based on industry surveys (Dice, Robert Half 2024-2025).
 
@@ -802,9 +802,9 @@ Leetcode:
 Certifications:
   AWS SAA (Month 5): $150
   AWS Security Specialty (Month 6): $300
-  CKS (Month 8): $395
+  AWS DOP (Month 8): $300
   OSCP (Month 11, Optional): $1,649
-  Subtotal: $2,494 ($845 without OSCP)
+  Subtotal: $2,399 ($750 without OSCP)
 
 Learning Platforms (Monthly Subscriptions):
   TryHackMe Premium: $10 × 12 = $120
@@ -836,11 +836,11 @@ Conference & Events:
   SecTalks Sydney: $0 (free)
   Subtotal: $0-$50
 
-TOTAL (Conservative): $3,391
-TOTAL (With OSCP): $5,040
-TOTAL (Maximum with O'Reilly): $5,641
+TOTAL (Conservative): $3,296
+TOTAL (With OSCP): $4,945
+TOTAL (Maximum with O'Reilly): $5,546
 
-Monthly Average: $283-$470
+Monthly Average: $275-$462
 ```
 
 ### 💡 Cost Optimization Strategies
