@@ -27,3 +27,5 @@ MyFirstJavaProject/.DS_Store
 MyFirstJavaProject/.project
 .DS_Store
 .project
+
+*.pem
