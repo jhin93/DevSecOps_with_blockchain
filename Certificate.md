@@ -2,7 +2,7 @@
 ## 1 AWS Certified Solutions Architect - Associate
 ## 2 AWS Certified Security - Specialty
 ## 3 CompTIA Security+ (SY0-701)
-
+## 4 CompTIA CySA+
 
 
 ---
