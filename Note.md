@@ -100,3 +100,27 @@ The core answer is: **"Nginx is one of the most popular tools used to implement 
 * **Nginx** is the **software/product** that performs that role excellently.
 
 Would you like me to provide the specific Linux commands to set up the 2GB Swap file on your EC2 instance?
+
+
+
+------------------------------------------------------------------------------------------------------------------
+# Classic Ports to know
+------------------------------------------------------------------------------------------------------------------
+
+- 22 = SSH (Secure Shell) - log into a Linux instance
+- 21 = FTP (File Transfer Protocol) – upload files into a file share
+- 22 = SFTP (Secure File Transfer Protocol) – upload files using SSH
+- 80 = HTTP – access unsecured websites
+- 443 = HTTPS – access secured websites
+- 3389 = RDP (Remote Desktop Protocol) – log into a Windows instance
+
+
+
+
+
+
+
+
+
+
+
