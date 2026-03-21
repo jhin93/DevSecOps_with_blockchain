@@ -1,0 +1,126 @@
+# 코딩 테스트 2: Docker Compose 작성
+# 아래 요구사항에 맞는 docker-compose.yml을 직접 작성하세요:
+
+# ml-api 서비스: 현재 디렉토리의 Dockerfile로 빌드, 포트 8080 노출, MODEL_PATH=/models/latest라는 환경변수 필요, db 서비스가 먼저 시작되어야 함
+# db 서비스: postgres:15 이미지 사용, 데이터가 컨테이너 삭제 후에도 유지되어야 함
+# redis 서비스: redis:7-alpine 이미지 사용, 포트 6379 노출
+# test2.docker-compose.yml 파일로 작성해보세요!
+
+
+version: '22.04'
+services:
+  db:
+    image: postgres:15
+    volumes:
+      - db_data:/var/lib/postgresql/DATABASE_URL
+    environment:
+      - POSTGRES_PASSWORD=pass
+    services:
+      - redis:7-alpine
+    ports:
+      - "8080:6379"
+
+  web:
+    ports:
+      - "8080:8000"
+    volumes:
+      - ./app:/app
+    depends_on:
+      - db
+    environment:
+      - MODEL_PATH=/models/latest
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# explanation
+#	문제	                                  당신의 코드	                            정답
+# 1	version은 compose 스펙 버전	            '22.04' (우분투 버전 씀)	                '3.8'
+# 2	서비스명이 요구사항과 다름	                web	                                  ml-api
+# 3	ml-api에 build: . 누락	               없음	                                  build: . 필요
+# 4	redis 서비스가 아예 없음	                db 안에 services:로 넣음 (잘못된 문법)	    별도 서비스로 분리
+# 5	포트 매핑 혼동	                        db에 "8080:6379"	                    ml-api가 "8080:8080", redis가 "6379:6379"
+# 6	postgres volume 경로 오류	              /var/lib/postgresql/DATABASE_URL	  /var/lib/postgresql/data
+# 7	volumes 선언 누락	                      없음	                                하단에 volumes: db_data: 필요
+
+
+
+
+
+# answer
+
+version: '3.8'
+services:
+  ml-api:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - MODEL_PATH=/models/latest
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=pass
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+volumes:
+  db_data:
+
+
