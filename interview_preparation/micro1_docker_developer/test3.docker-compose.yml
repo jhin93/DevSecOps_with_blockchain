@@ -1,0 +1,110 @@
+# Below is a CI/CD pipeline (GitHub Actions) for building and deploying a Docker image. There are 4 errors. Find and fix all of them.
+
+
+name: Build and Deploy
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build image
+        run: docker build .
+
+      - name: Run tests
+        run: docker run myapp:latest pytest
+
+      - name: Login to ECR
+        run: aws ecr get-login-password | docker login --username AWS --password-stdin 123456.dkr.ecr.us-east-1.amazonaws.com
+
+      - name: Push image
+        run: docker push myapp:latest
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+원래 문제와 당신의 수정을 비교합니다:
+
+# #	원래 에러	                                                                      정답	                                    당신의 수정	
+# 1	docker build . — 태그 없음	                                                    docker build -t myapp:latest .	          그대로 둠	
+# 2	docker run myapp:latest pytest — 빌드에서 태그를 안 붙였으니 이미지를 못 찾음	          1번 수정 후 해결됨	                          apt-get pytest myapp:22.05로 바꿈 (문법 오류)	
+# 3	docker push myapp:latest — ECR 주소로 태그 안 함	                                docker tag 후 ECR 전체 주소로 push	          myapp:22.05로만 바꿈	
+# 4	branches: [main] 자체는 맞았음	                                                  [main] 유지                             	[branches]로 바꿈 — 오히려 틀리게 만듦	
+
+
+
+
+
+#  answer
+
+name: Build and Deploy
+on:
+  push:
+    branches: [main]    # "main" 브랜치 유지
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build image
+        run: docker build -t myapp:latest .    # ← -t로 태그 필수
+
+      - name: Run tests
+        run: docker run myapp:latest pytest    # ← 이미지명이 맨 앞, 명령이 뒤
+
+      - name: Login to ECR
+        run: aws ecr get-login-password | docker login --username AWS --password-stdin 123456.dkr.ecr.us-east-1.amazonaws.com
+
+      - name: Tag and Push image                # ← ECR 주소로 태그 후 push
+        run: |
+          docker tag myapp:latest 123456.dkr.ecr.us-east-1.amazonaws.com/myapp:latest
+          docker push 123456.dkr.ecr.us-east-1.amazonaws.com/myapp:latest
