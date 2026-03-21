@@ -84,27 +84,27 @@ jobs:
 
 #  answer
 
-name: Build and Deploy
-on:
-  push:
-    branches: [main]    # "main" 브랜치 유지
+# name: Build and Deploy
+# on:
+#   push:
+#     branches: [main]    # "main" 브랜치 유지
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
 
-      - name: Build image
-        run: docker build -t myapp:latest .    # ← -t로 태그 필수
+#       - name: Build image
+#         run: docker build -t myapp:latest .    # ← -t로 태그 필수
 
-      - name: Run tests
-        run: docker run myapp:latest pytest    # ← 이미지명이 맨 앞, 명령이 뒤
+#       - name: Run tests
+#         run: docker run myapp:latest pytest    # ← 이미지명이 맨 앞, 명령이 뒤
 
-      - name: Login to ECR
-        run: aws ecr get-login-password | docker login --username AWS --password-stdin 123456.dkr.ecr.us-east-1.amazonaws.com
+#       - name: Login to ECR
+#         run: aws ecr get-login-password | docker login --username AWS --password-stdin 123456.dkr.ecr.us-east-1.amazonaws.com
 
-      - name: Tag and Push image                # ← ECR 주소로 태그 후 push
-        run: |
-          docker tag myapp:latest 123456.dkr.ecr.us-east-1.amazonaws.com/myapp:latest
-          docker push 123456.dkr.ecr.us-east-1.amazonaws.com/myapp:latest
+#       - name: Tag and Push image                # ← ECR 주소로 태그 후 push
+#         run: |
+#           docker tag myapp:latest 123456.dkr.ecr.us-east-1.amazonaws.com/myapp:latest
+#           docker push 123456.dkr.ecr.us-east-1.amazonaws.com/myapp:latest
