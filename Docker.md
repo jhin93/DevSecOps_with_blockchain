@@ -1,4 +1,3 @@
-# Docker Developer AI Interview Cheatsheet
 
 ## Docker Commands & Flags
 
