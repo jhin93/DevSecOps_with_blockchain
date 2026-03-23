@@ -375,12 +375,12 @@ Add HEALTHCHECK so orchestrators know when the model is loaded and ready to serv
 
 **Answer:**
 
-| | AWS | GCP | Azure |
-|---|---|---|---|
-| **Container Registry** | ECR | Artifact Registry | ACR |
-| **Managed Kubernetes** | EKS | GKE | AKS |
-| **Serverless Containers** | Fargate / App Runner | Cloud Run | Container Apps |
-| **Container Instances** | ECS on EC2 | GCE with containers | ACI |
+|                           | AWS                  | GCP                | Azure |
+|---                        |---                   |---                 |---    |
+| **Container Registry**    | ECR                  | Artifact Registry   | ACR |
+| **Managed Kubernetes**    | EKS                  | GKE                 | AKS |
+| **Serverless Containers** | Fargate / App Runner | Cloud Run           | Container Apps |
+| **Container Instances**   | ECS on EC2           | GCE with containers | ACI |
 
 Interview answer: "I build Docker images in CI/CD, push to a container registry like ECR, and deploy to a managed Kubernetes service like EKS for orchestration. For simpler workloads, I use serverless options like Fargate or Cloud Run."
 
