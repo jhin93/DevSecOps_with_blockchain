@@ -1,126 +1,44 @@
 
-## 1 AWS Certified Solutions Architect - Associate
-## 2 AWS Certified Security - Specialty
-## 3 CompTIA Security+ (SY0-701)
-## 4 CompTIA CySA+
-
+## 취득 순서: SAA → Terraform → CKA
 
 ---
 
-## 문서별 경쟁률 순위 비교
+### 이유
 
-| 출처             | Security Engineering | DevOps/SRE     | 더 낮은 경쟁률     |
-|----------------|----------------------|----------------|--------------|
-| claude.pdf     | 4위                   | 7위             | **Security** |
-| Grok.pdf       | 3위 (CR 4.8)          | 6위 (CR 6.0)    | **Security** |
-| chatgpt.pdf    | CR 0.025             | CR 0.0031      | **DevOps**   |
-| Komo.pdf       | CR 1.05              | CR 1.10        | **Security** |
-| Felo.pdf       | 3위 (CR 2.4)          | 7위 (CR 4.3)    | **Security** |
-| Gemini.pdf     | 1위 (CR 14.8)         | 3위 (CR 28.6)   | **Security** |
-| perplexity.pdf | 5위 (Score 3.2)       | 6위 (Score 3.5) | **Security** |
+**1단계: AWS SAA**
+- 준비 시간: 40~80시간
+- Terraform과 CKA 모두 클라우드 인프라 이해를 전제한다. SAA가 이 베이스를 만든다.
+- 먼저 따지 않으면 Terraform 공부할 때 AWS 리소스 개념을 동시에 배워야 해서 비효율적이다.
 
-**7개 문서 중 6개에서 Security가 DevOps보다 경쟁률이 낮습니다.**
+**2단계: Terraform Associate (004)**
+- 준비 시간: 2~6주 (하루 1~2시간)
+- SAA로 쌓은 AWS 리소스 지식을 IaC로 그대로 연결 가능하다. 지식 전이율이 높다.
+- 상대적으로 짧고 객관식 시험이라 CKA 전에 빠르게 처리하고 가는 게 효율적이다.
 
----
-
-## 핵심 데이터 근거
-
-### Security Engineering
-
-**claude.pdf:**
-> "Global workforce gap 4.8 million unfilled positions" (ISC2 2024)
-> "Organizations understaffed 65% in cybersecurity/compliance"
-> 단, "Entry-level supply/demand 10% worker SURPLUS at 0-2 years"
-
-**Gemini.pdf:**
-> "Competition Ratio 14.8 - the lowest among all ten domains"
-> "For every open entry-level role, only 14.8 qualified candidates are identified"
-> "89% of hiring managers accept entry-level certifications as a proxy for experience"
-
-### DevOps/SRE
-
-**claude.pdf:**
-> "Junior-level role percentage Only 5% of DevOps positions"
-> "Recruiter difficulty finding candidates 19%"
-
-**Gemini.pdf:**
-> "Competition Ratio 28.6"
-> "83% of organizations have adopted DevOps, yet the field remains one of the hardest to fill"
+**3단계: CKA**
+- 준비 시간: 60~120시간 이상 (랩 중심)
+- performance-based 시험이라 3개 중 난이도가 가장 높다.
+- SAA + Terraform으로 클라우드/인프라 개념이 잡힌 상태에서 접근해야 쿠버네티스 네트워킹, 스토리지 개념이 더 빠르게 연결된다.
+- 마지막에 집중 투자하는 게 맞다.
 
 ---
 
-## 구조적 차이 분석
+## 전체 타임라인 추정
 
-```
-Security Engineering 경쟁 구조:
-┌─────────────────────────────────────────┐
-│ 수요: 4.8M 미충원 포지션 (매우 높음)      │
-│ 공급: Entry-level 10% 과잉 공급          │
-│ 진입 장벽: 자격증 필수 (높음)             │
-│ 결과: Mid-level 부족, Entry-level 포화   │
-└─────────────────────────────────────────┘
+| 단계 | 기간 |
+|---|---|
+| AWS SAA | 1.5~2개월 |
+| Terraform Associate | 1~1.5개월 |
+| CKA | 2~3개월 |
+| **총합** | **약 5~6개월** |
 
-DevOps/SRE 경쟁 구조:
-┌─────────────────────────────────────────┐
-│ 수요: 443% 채용 공고 증가 (매우 높음)     │
-│ 공급: Entry-level 포지션 자체가 5%만 존재 │
-│ 진입 장벽: 1-2년 경험 요구 (매우 높음)    │
-│ 결과: Entry-level 포지션 자체가 희소      │
-└─────────────────────────────────────────┘
-```
+졸업(2026년 12월) 전에 병행 가능한 일정이다.
 
 ---
 
-## Entry-Level 관점에서의 핵심 차이
+**[Confidence Level]**
+High — 지식 의존성 구조는 명확하고, 준비 시간 수치는 이전 검색 결과에서 확인된 값이다.
 
-| 항목                   | Security              | DevOps     |
-|:----------------------|-----------------------|------------|
-| Entry-level 포지션 비율  | 상대적으로 많음          | **5%만 존재** |
-| Entry-level 경쟁 상황   | 10% 공급 과잉           | 포지션 자체가 적음 |
-| 자격증으로 진입 가능       | **가능 (89% 인정)**     | 경험 우선      |
-| 무경험자 채용 가능성       | 중간                   | 낮음         |
-
-**claude.pdf 인용:**
-> "DevOps/SRE has exceptionally high barriers to entry because the role inherently requires operational experience. With only 5% of positions targeting junior candidates, competition for those limited entry-level roles is intense."
-
----
-
-## 결론
-
-| 측면                  | Security | DevOps        | 승자           |
-|----------------------|----------|---------------|--------------|
-| 전체 경쟁률             | 낮음       | 중간          | **Security** |
-| Entry-level 포지션 존재 | 많음       | **5%만**     | **Security** |
-| 자격증으로 진입          | 가능       | 어려움         | **Security** |
-| Entry-level 공급 과잉  | 10% 과잉   | 해당 없음       | DevOps       |
-
----
-
-## Jhin 상황에 대한 시사점
-
-**Security Engineer가 DevOps보다 진입이 용이합니다.**
-
-| 이유      | 설명                                           
-|----------|----------------------------------------------
-| 포지션 존재 | DevOps는 entry-level이 5%뿐, Security는 상대적으로 많음 
-| 자격증 인정 | Security는 89%가 자격증을 경험 대체로 인정                
-| 경쟁률     | 7개 문서 중 6개에서 Security가 더 낮음                  
-
-**단, 주의점:**
-Security entry-level에서 10% 공급 과잉이 있으므로, **Security+ 만으로는 부족**하고 AWS Security Specialty 같은 전문 자격증이 차별화 요소가 됩니다.
-
----
-
-## 최종 자격증 조합 재확인
-
-이 분석을 바탕으로:
-
-```
-SAA → Security+ → AWS Security Specialty
-```
-
-이 조합이 **취업 확률 측면에서 최적**입니다.
-
-- Security Engineer: 경쟁률 낮음 + 자격증 인정률 높음
-- DevSecOps: Security 비중 50-60%로 Security 자격증이 핵심
-- DevOps 백업 필요 시: 자격증보다 **포트폴리오로 보완** (GitHub Actions, Terraform 프로젝트)
+**[Caveats]**
+- 현재 Cloud Riverdale에서 DevOps 실무 중이므로 CKA 랩 실습 시간은 실무와 병행 시 단축 가능
+- Terraform은 이미 실무에서 쓰고 있다면 1단계로 앞당겨도 무방
