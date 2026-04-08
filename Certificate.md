@@ -1,20 +1,19 @@
 
-## 1순위: AWS SAA 취득
-모든 것의 기반이다. AWS SAA가 있으면 Cloud Riverdale 인프라 개선 작업의 신뢰도가 올라가고, 이력서의 기술 스택 검증이 된다. CKA보다 먼저 하는 이유는 루마니아 JD에서 AWS 경험이 Kubernetes보다 더 자주 등장하고, SAA 공부 중 배우는 내용을 Cloud Riverdale에 즉시 적용할 수 있기 때문이다.
+### 1순위: AWS SAA 취득
+모든 것의 기반.
 
-## 2순위: Terraform으로 현재 인프라 코드화 (AWS SAA 공부와 병렬)
-AWS SAA 공부하면서 동시에 진행한다. 지금 수동으로 구성된 EC2, VPC, IAM 등을 Terraform으로 코드화하는 작업이다. 공부한 내용을 바로 적용하기 때문에 학습 속도도 빠르고, 완성되면 GitHub 레포가 생기면서 포트폴리오 문제도 해결된다. IaC 갭도 동시에 메워진다.
+### 2순위: Terraform으로 현재 인프라 코드화 (AWS SAA 공부와 병렬)
+변화 없음. 단, 이제 Terraform 실무 경험이 2번째 자격증 준비와 직접 연결된다. Cloud Riverdale 인프라를 코드화하면서 공부하면 Terraform Associate 준비가 자연스럽게 된다.
 
-## 3순위: CKA 취득 (AWS SAA 취득 후)
-AWS SAA 취득 후 바로 시작한다. CKA는 실습 기반 시험이라 공부하면서 Cloud Riverdale 서비스를 Kubernetes로 운영하는 작업을 병행한다. CI/CD 파이프라인에 K8s 배포를 통합하면 경력 기술서가 한층 강해진다.
+### 3순위: Terraform Associate 취득 (AWS SAA 취득 후)
+2순위에서 실무 적용을 병렬로 했기 때문에 준비 기간이 짧다. AWS SAA 취득하고 바로 이어서 진행한다.
 
-## 4순위: 모니터링 스택 구성 (CKA 공부와 병렬)
-Prometheus + Grafana를 Cloud Riverdale 프로덕션에 붙인다. CKA 공부 중 어차피 모니터링 개념이 나오기 때문에 병렬로 진행하기 좋다. 완성되면 "프로덕션 모니터링 구축 경험"이 이력서에 추가된다.
+### 4순위: CKA 준비 + K8s Cloud Riverdale 적용 (병렬)
+Terraform Associate 취득 후 시작. CKA 공부하면서 Cloud Riverdale 서비스에 K8s 배포 통합. 모니터링 스택(Prometheus/Grafana)도 이 시기에 함께 구성한다.
 
-## 5순위: 3번째 자격증 결정 및 취득
-CKA 취득 후 진행한다. 목표가 DevSecOps면 Terraform Associate 또는 CKS(Certified Kubernetes Security Specialist) 중 하나다. Terraform Associate는 2순위에서 이미 실무 경험을 쌓았기 때문에 준비 기간이 짧다. CKS는 CKA 이후에만 응시 가능하고 DevSecOps 방향성과 가장 직접 연결된다. Oct 2026 타임라인에 맞는지 확인 후 결정한다.
+### 5순위: CKA 취득
 
-## 6순위: Cloud Riverdale 계약 연장 또는 대체 경력 확보
+### 6순위: Cloud Riverdale 계약 연장 또는 대체 경력 확보
 Jun 2026 계약 종료 후 갭이 생기지 않도록 지금부터 준비한다. 연장이 가능하면 연장, 불가능하면 루마니아 현지 또는 원격 junior DevOps 포지션 지원을 Jun 2026 이전에 시작한다. 이게 늦어지면 Oct 2026 졸업 시점에 4개월 갭이 생긴다.
 
 
